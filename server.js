@@ -37,4 +37,7 @@ server.delete('/videos/:id', (request, reply)=>{
     return reply.status(2004).send()
 })
 
-server.listen({ port: process.env || 2222 })
+server.listen({ 
+    host: '0.0.0.0', 
+    port: process.env || 2222
+})
